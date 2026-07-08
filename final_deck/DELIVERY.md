@@ -8,8 +8,14 @@ dashboard, matrix or chart with a single message each.
 
 | | Link |
 |---|---|
-| **Edit in Canva** | https://www.canva.com/d/oyg9HsumHb79fd0 |
-| **View / present** | https://www.canva.com/d/CcNA6hSoL-kNPxi |
+| **Edit in Canva (v2 — current)** | https://www.canva.com/d/dz4Kxa9aR6mIwao |
+| **View / present (v2 — current)** | https://www.canva.com/d/95VEAX8o_dtbsfK |
+| Edit (v1, superseded) | https://www.canva.com/d/oyg9HsumHb79fd0 |
+
+v2 applies the board-advisor review: hero treatment on slide 4 (fracture marks
+on the spine), slide 8 as a control panel, an explicit week-by-week tripwire
+strip on slide 11, and slide 13 reframed as
+*"I am not asking for budget. I am asking for decision rights."*
 
 - 14 slides, 1920 × 1080, speaker notes preserved on every slide.
 - Ready to present. Open the edit link to tweak anything; use the view link to present.
@@ -42,7 +48,7 @@ not a template. Minimal, high-contrast, lots of whitespace, one idea per slide.
 | 10 | Ambition right, sequencing is the risk | Four guardrail cards + readiness gate |
 | 11 | Cygnus replayed | Margin-drift line chart vs tripwire |
 | 12 | Commit / refuse | Two-column commitments vs refusals |
-| 13 | Three asks. None is budget. | Three-column ask + closing line |
+| 13 | I am asking for decision rights | Three-column ask + closing line |
 | 14 | The 13-week cash view | Runway line chart (appendix) |
 
 ## How it was built (reproducible)
