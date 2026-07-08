@@ -21,7 +21,7 @@ const titles = [
   'The ambition is right. The sequencing is the risk.',
   'Same project, new regime: Cygnus replayed',
   'What I commit to, and what I refuse to promise',
-  'Three asks. None of them is budget.',
+  'I am not asking for budget. I am asking for decision rights.',
   'The 13-week cash view: why weeks matter',
 ];
 

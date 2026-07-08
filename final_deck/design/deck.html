@@ -51,20 +51,23 @@
 .s3 .turn .t{font-family:'Inter Tight';font-weight:600;font-size:20px;color:var(--d-hi);line-height:1.3}
 .s3 .cap{font-family:'Inter';font-weight:500;font-size:14px;letter-spacing:0.02em;color:var(--d-lo);margin-top:22px}
 
-/* ---- S4 pipeline ---- */
-.s4 .pipe{position:absolute;left:132px;right:132px;top:372px;bottom:140px;display:flex;flex-direction:column;justify-content:center}
+/* ---- S4 pipeline (hero) ---- */
+.s4 .pipe{position:absolute;left:132px;right:132px;top:340px;bottom:150px;display:flex;flex-direction:column;justify-content:center}
+.s4 .flowlabel{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:34px}
+.s4 .flowlabel .l{font-family:'Inter';font-weight:600;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:var(--d-lo)}
+.s4 .flowlabel .l b{color:var(--rust);font-weight:600}
 .s4 .track{position:relative;display:grid;grid-template-columns:repeat(6,1fr)}
-.s4 .track::before{content:"";position:absolute;left:8.33%;right:8.33%;top:119px;height:2px;background:linear-gradient(90deg,#43A178,#1C6B4A);z-index:1}
-.s4 .node{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 12px}
-.s4 .node .name{height:70px;display:flex;align-items:flex-end;justify-content:center;font-family:'Inter Tight';font-weight:600;font-size:24px;letter-spacing:-0.01em;color:var(--d-hi);line-height:1.08}
-.s4 .node .ring{width:60px;height:60px;border-radius:50%;background:var(--dark);border:2px solid var(--green-line);display:flex;align-items:center;justify-content:center;margin:20px 0 24px}
-.s4 .node .ring span{font-family:'Fraunces';font-weight:500;font-size:23px;color:var(--green-bright);line-height:1}
+.s4 .track::before{content:"";position:absolute;left:8.33%;right:8.33%;top:133px;height:3px;background:linear-gradient(90deg,#43A178,#1C6B4A);z-index:1}
+.s4 .node{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px}
+.s4 .node .name{height:76px;display:flex;align-items:flex-end;justify-content:center;font-family:'Inter Tight';font-weight:600;font-size:27px;letter-spacing:-0.012em;color:var(--d-hi);line-height:1.06}
+.s4 .node .ring{position:relative;width:76px;height:76px;border-radius:50%;background:var(--dark);border:2.5px solid var(--green-line);display:flex;align-items:center;justify-content:center;margin:20px 0 26px}
+.s4 .node .ring span{font-family:'Fraunces';font-weight:500;font-size:29px;color:var(--green-bright);line-height:1}
+.s4 .node .ring .crack{position:absolute;top:-13px;right:-13px;width:32px;height:32px;border-radius:50%;background:var(--rust);display:flex;align-items:center;justify-content:center}
 .s4 .node.last .ring{background:var(--green-bright);border-color:var(--green-bright)}
 .s4 .node.last .ring span{color:var(--dark)}
 .s4 .node.last .name{color:var(--green-bright)}
-.s4 .node .cap{font-family:'Inter';font-weight:600;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--d-lo);margin-bottom:10px}
-.s4 .node .brk{font-family:'Inter';font-weight:400;font-size:16px;color:var(--rust);line-height:1.35;max-width:210px}
-.s4 .node .brk .b{display:inline-block;width:6px;height:6px;background:var(--rust);border-radius:50%;margin-right:8px;vertical-align:middle}
+.s4 .node .brk{font-family:'Inter';font-weight:500;font-size:17px;color:var(--rust);line-height:1.32;max-width:230px;min-height:46px}
+.s4 .node .cap{font-family:'Inter';font-weight:600;font-size:11.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--d-lo);margin-top:12px}
 
 /* ---- S5 roadmap ---- */
 .s5 .road{position:absolute;left:132px;right:132px;top:280px;bottom:150px;display:flex;flex-direction:column;justify-content:center}
@@ -131,6 +134,10 @@
 .s8 .rail .step p{font-family:'Inter';font-weight:400;font-size:14.5px;color:var(--d-mid);line-height:1.42}
 .s8 .rail .contract{margin-top:16px;font-family:'Inter';font-weight:400;font-size:13px;color:var(--d-lo);letter-spacing:0.01em}
 .s8 .rail .contract b{color:var(--green-bright);font-weight:600}
+.s8 .board{background:rgba(255,255,255,0.022);border:1px solid var(--dark-hair);border-radius:14px;padding:30px 32px 32px}
+.s8 .board .panelhd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--dark-hair)}
+.s8 .board .panelhd .t{font-family:'Inter Tight';font-weight:600;font-size:21px;letter-spacing:-0.01em;color:var(--d-hi)}
+.s8 .board .panelhd .s{font-family:'Inter';font-weight:600;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--green-bright)}
 .s8 .board .grouphd{display:flex;align-items:center;gap:12px;margin:0 0 14px}
 .s8 .board .grouphd .gl{font-family:'Inter';font-weight:600;font-size:12.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--d-mid)}
 .s8 .board .grouphd .gr{flex:1;height:1px;background:var(--dark-hair)}
@@ -170,8 +177,19 @@
 .s10 .gate .t b{color:var(--green-bright);font-weight:600}
 
 /* ---- S11 tripwire chart ---- */
-.s11 .wrap{position:absolute;left:132px;right:132px;top:170px;bottom:148px;display:grid;grid-template-columns:1.45fr 1fr;gap:56px;align-items:center}
+.s11 .wrap{position:absolute;left:132px;right:132px;top:170px;bottom:140px;display:grid;grid-template-columns:1.45fr 1fr;gap:56px;align-items:center}
 .s11 .chartcard{position:relative}
+.s11 .strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:6px}
+.s11 .wk{border-top:2px solid var(--dark-hair);padding:12px 4px 0;text-align:center}
+.s11 .wk .w{font-family:'Inter';font-weight:600;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--d-lo);margin-bottom:8px}
+.s11 .wk .st{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:3px;font-family:'Inter';font-weight:600;font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase}
+.s11 .wk .st.ok{background:rgba(67,161,120,0.16);color:var(--green-bright)}
+.s11 .wk .st.alert{background:var(--rust);color:#F2F0E9}
+.s11 .wk .st.watch{background:rgba(190,154,80,0.2);color:var(--amber)}
+.s11 .wk .st.dead{background:rgba(176,101,74,0.16);color:var(--rust)}
+.s11 .wk .a{font-family:'Inter';font-weight:400;font-size:12.5px;color:var(--d-mid);line-height:1.35;margin-top:8px}
+.s11 .wk.old{border-top-color:rgba(176,101,74,0.5)}
+.s11 .wk.old .w{color:var(--rust)}
 .s11 .rt .big{font-family:'Fraunces';font-weight:500;font-size:96px;line-height:0.92;color:var(--d-hi);letter-spacing:-0.02em}
 .s11 .rt .big .g{color:var(--green-bright)}
 .s11 .rt .lbl{font-family:'Inter Tight';font-weight:600;font-size:24px;color:var(--d-hi);margin-top:10px;line-height:1.28}
@@ -203,11 +221,11 @@
 .s12 .refuse .item .tx b{color:var(--d-hi);font-weight:600}
 
 /* ---- S13 asks ---- */
-.s13 .asks{position:absolute;left:132px;right:132px;top:280px;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.s13 .ask{padding:0 40px;border-left:1px solid var(--dark-hair);min-height:300px}
+.s13 .asks{position:absolute;left:132px;right:132px;top:352px;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.s13 .ask{padding:0 40px;border-left:1px solid var(--dark-hair);min-height:280px}
 .s13 .ask:first-child{padding-left:0;border-left:0}
 .s13 .ask .no{font-family:'Fraunces';font-weight:500;font-size:26px;color:var(--green-bright)}
-.s13 .ask h3{font-family:'Inter Tight';font-weight:700;font-size:38px;letter-spacing:-0.02em;color:var(--d-hi);line-height:1.05;margin:20px 0 20px}
+.s13 .ask h3{font-family:'Inter Tight';font-weight:700;font-size:36px;letter-spacing:-0.02em;color:var(--d-hi);line-height:1.05;margin:18px 0 18px}
 .s13 .ask p{font-family:'Inter';font-weight:400;font-size:17px;color:var(--d-mid);line-height:1.5}
 .s13 .close{position:absolute;left:132px;right:132px;bottom:120px;border-top:1px solid var(--dark-hair);padding-top:30px}
 .s13 .close .t{font-family:'Inter Tight';font-weight:600;font-size:25px;letter-spacing:-0.01em;color:var(--d-hi);line-height:1.4;max-width:1400px}
@@ -339,13 +357,17 @@
   </div>
 
   <div class="pipe">
+    <div class="flowlabel">
+      <span class="l">The revenue-to-cash spine</span>
+      <span class="l"><b>●</b>&nbsp; = where it breaks today</span>
+    </div>
     <div class="track">
-      <div class="node"><div class="name">Project data</div><div class="ring"><span>1</span></div><div class="cap">Step 01</div><div class="brk"><span class="b"></span>Hours logged inconsistently</div></div>
-      <div class="node"><div class="name">Utilisation</div><div class="ring"><span>2</span></div><div class="cap">Step 02</div><div class="brk"><span class="b"></span>No agreed formula</div></div>
-      <div class="node"><div class="name">Revenue</div><div class="ring"><span>3</span></div><div class="cap">Step 03</div><div class="brk"><span class="b"></span>Fixed-price changes the rules</div></div>
-      <div class="node"><div class="name">Invoicing</div><div class="ring"><span>4</span></div><div class="cap">Step 04</div><div class="brk"><span class="b"></span>Terms not enforced</div></div>
-      <div class="node"><div class="name">Receivables</div><div class="ring"><span>5</span></div><div class="cap">Step 05</div><div class="brk"><span class="b"></span>Too much aged debt</div></div>
-      <div class="node last"><div class="name">Cash forecast</div><div class="ring"><span>6</span></div><div class="cap">Step 06</div><div class="brk"><span class="b"></span>Misses keep worsening</div></div>
+      <div class="node"><div class="name">Project<br>data</div><div class="ring"><span>1</span><span class="crack"><svg width="15" height="15" viewBox="0 0 15 15"><path d="M8.6 1.5 5 8h3l-1.6 5.5L11 6.6H7.8Z" fill="#161917"/></svg></span></div><div class="brk">Hours logged inconsistently</div><div class="cap">Step 01</div></div>
+      <div class="node"><div class="name">Utilisation</div><div class="ring"><span>2</span><span class="crack"><svg width="15" height="15" viewBox="0 0 15 15"><path d="M8.6 1.5 5 8h3l-1.6 5.5L11 6.6H7.8Z" fill="#161917"/></svg></span></div><div class="brk">No agreed formula</div><div class="cap">Step 02</div></div>
+      <div class="node"><div class="name">Revenue</div><div class="ring"><span>3</span><span class="crack"><svg width="15" height="15" viewBox="0 0 15 15"><path d="M8.6 1.5 5 8h3l-1.6 5.5L11 6.6H7.8Z" fill="#161917"/></svg></span></div><div class="brk">Fixed-price changes the rules</div><div class="cap">Step 03</div></div>
+      <div class="node"><div class="name">Invoicing</div><div class="ring"><span>4</span><span class="crack"><svg width="15" height="15" viewBox="0 0 15 15"><path d="M8.6 1.5 5 8h3l-1.6 5.5L11 6.6H7.8Z" fill="#161917"/></svg></span></div><div class="brk">Terms not enforced</div><div class="cap">Step 04</div></div>
+      <div class="node"><div class="name">Receivables</div><div class="ring"><span>5</span><span class="crack"><svg width="15" height="15" viewBox="0 0 15 15"><path d="M8.6 1.5 5 8h3l-1.6 5.5L11 6.6H7.8Z" fill="#161917"/></svg></span></div><div class="brk">Too much aged debt</div><div class="cap">Step 05</div></div>
+      <div class="node last"><div class="name">Cash<br>forecast</div><div class="ring"><span>6</span><span class="crack"><svg width="15" height="15" viewBox="0 0 15 15"><path d="M8.6 1.5 5 8h3l-1.6 5.5L11 6.6H7.8Z" fill="#161917"/></svg></span></div><div class="brk">Misses keep worsening</div><div class="cap">Step 06</div></div>
     </div>
   </div>
 
@@ -513,6 +535,7 @@
     </div>
 
     <div class="board">
+      <div class="panelhd"><span class="t">Scorecard v2</span><span class="s">8 numbers · 1 definition · 1 source · 1 owner</span></div>
       <div class="grouphd"><span class="gl">Cash</span><span class="gr"></span><span class="cad">Weekly</span></div>
       <div class="tiles">
         <div class="tile cash"><span class="accent"></span><span class="no">01</span><div class="nm">Cash position</div><div class="cad">Weekly</div></div>
@@ -660,6 +683,13 @@
         <text x="510" y="224" fill="#9BA199" font-size="12.5" text-anchor="middle">escalates to Cash Council</text>
         <text x="690" y="128" fill="#43A178" font-size="13" font-weight="600" text-anchor="middle">change order +€38k</text>
       </svg>
+      <div class="strip">
+        <div class="wk"><div class="w">Week 1</div><span class="st ok">OK</span><div class="a">34% margin · −1 pt</div></div>
+        <div class="wk"><div class="w">Week 2</div><span class="st ok">OK</span><div class="a">32% margin · −3 pts</div></div>
+        <div class="wk"><div class="w">Week 3</div><span class="st alert">Alert</span><div class="a">Escalates to Cash Council</div></div>
+        <div class="wk"><div class="w">Week 4</div><span class="st watch">Watch</span><div class="a">Change order signed +€38k</div></div>
+        <div class="wk old"><div class="w">What actually happened</div><span class="st dead">Written off</span><div class="a">8% at close · found at the end</div></div>
+      </div>
     </div>
 
     <div class="rt">
@@ -709,9 +739,9 @@
 
 <!-- ============================== SLIDE 13 ============================== -->
 <section class="slide dark s13" data-notes="This makes the board part of the solution without asking for budget. That is powerful. Give me those three and by day 90 confidence stops being a word on a slide.">
-  <div class="head"><div class="kicker">The ask</div><div class="wordmark">Building Confidence</div></div>
+  <div class="head"><div class="kicker">The ask <span class="dot">/</span> Three asks — none of them is budget</div><div class="wordmark">Building Confidence</div></div>
   <div style="position:absolute;left:132px;top:150px;right:132px">
-    <div class="h1">Three asks. <span class="accent">None of them is budget.</span></div>
+    <div class="h1">I am not asking for budget.<br><span class="accent">I am asking for decision rights.</span></div>
   </div>
 
   <div class="asks">
