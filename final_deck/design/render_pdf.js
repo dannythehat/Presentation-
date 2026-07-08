@@ -19,7 +19,7 @@ const path = require('path');
   await page.pdf({
     path: path.join(DIR, 'Building-Confidence-LimeChain-CFO.pdf'),
     width: '1920px', height: '1080px',
-    printBackground: true, pageRanges: '1-14',
+    printBackground: true, pageRanges: '1-10',
   });
   await browser.close();
   console.log('PDF written.');
