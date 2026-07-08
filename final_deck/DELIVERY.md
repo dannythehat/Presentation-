@@ -13,15 +13,10 @@ dashboard, matrix or chart with a single message each.
 | Edit (14 slide v2, superseded) | https://www.canva.com/d/dz4Kxa9aR6mIwao |
 | Edit (v1, superseded) | https://www.canva.com/d/oyg9HsumHb79fd0 |
 
-v2 applies the board-advisor review: hero treatment on slide 4 (fracture marks
-on the spine), slide 8 as a control panel, an explicit week-by-week tripwire
-strip on slide 11, and slide 13 reframed as
-*"I am not asking for budget. I am asking for decision rights."*
-
 - 10 slides, 1920 × 1080. One message per slide, roughly 25 words or fewer; all explanation lives in the speaker notes.
 - Ready to present. Open the edit link to tweak anything; use the view link to present.
 
-A portable, print-ready copy is also included: **`Building-Confidence-LimeChain-CFO.pdf`** (vector, 14 pages).
+A portable, print-ready copy is also included: **`Building-Confidence-LimeChain-CFO.pdf`** (vector, 10 pages).
 
 ## Design language
 
