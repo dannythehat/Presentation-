@@ -1,0 +1,126 @@
+/* ============================================================
+   BUILDING CONFIDENCE — LimeChain CFO Board Deck
+   Design system. Executive / consulting aesthetic.
+   Author space: 1920 x 1080 per slide.
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+@font-face{font-family:'Inter Tight';src:url('fonts/intertight-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:'Inter Tight';src:url('fonts/intertight-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:block}
+@font-face{font-family:'Inter Tight';src:url('fonts/intertight-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:'Inter';src:url('fonts/inter-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'Inter';src:url('fonts/inter-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:'Inter';src:url('fonts/inter-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:block}
+@font-face{font-family:'Fraunces';src:url('fonts/fraunces-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'Fraunces';src:url('fonts/fraunces-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block}
+
+/* ---------- Palette ---------- */
+:root{
+  --dark:#161917;         /* warm charcoal */
+  --dark-2:#1E2220;       /* raised panel on dark */
+  --dark-3:#252A27;       /* higher panel */
+  --dark-hair:rgba(255,255,255,0.10);
+  --dark-hair-soft:rgba(255,255,255,0.055);
+
+  --light:#F2F0E9;        /* warm bone */
+  --light-2:#FBFAF6;      /* card on light */
+  --light-3:#EAE7DD;      /* recessed on light */
+  --light-hair:rgba(22,25,23,0.13);
+  --light-hair-soft:rgba(22,25,23,0.07);
+
+  --green:#1C6B4A;        /* deep finance green (primary) */
+  --green-bright:#43A178; /* positive / data */
+  --green-deep:#103D2B;   /* dark green fill */
+  --green-pale:#D3E1D8;   /* pale fill on light */
+  --green-line:#2C8A61;
+
+  --purple:#6E6796;       /* muted purple (occasional) */
+  --purple-deep:#2A2740;
+  --purple-pale:#DAD6E6;
+
+  --rust:#B0654A;         /* muted negative / alert */
+  --rust-pale:#E6CFC6;
+  --amber:#BE9A50;        /* watch */
+  --amber-pale:#E7DBBE;
+
+  /* text on dark */
+  --d-hi:#ECEAE3;
+  --d-mid:#9BA199;
+  --d-lo:#6B706A;
+  /* text on light */
+  --l-hi:#1B211D;
+  --l-mid:#59615A;
+  --l-lo:#8B938C;
+}
+
+/* ---------- Reset ---------- */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#0c0d0c}
+body{font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+
+.deck{display:flex;flex-direction:column;align-items:center;gap:40px;padding:40px}
+
+/* ---------- Slide frame ---------- */
+.slide{
+  position:relative;width:1920px;height:1080px;overflow:hidden;
+  padding:88px 132px 84px 132px;
+  --ink:var(--l-hi);--ink-mid:var(--l-mid);--ink-lo:var(--l-lo);--hair:var(--light-hair);--hair-soft:var(--light-hair-soft);
+}
+.slide.dark{background:var(--dark);color:var(--d-hi);
+  --ink:var(--d-hi);--ink-mid:var(--d-mid);--ink-lo:var(--d-lo);--hair:var(--dark-hair);--hair-soft:var(--dark-hair-soft);}
+.slide.light{background:var(--light);color:var(--l-hi);}
+
+/* subtle vignette / texture on dark to avoid flat AI look */
+.slide.dark::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(120% 90% at 82% 8%, rgba(67,161,120,0.055), rgba(0,0,0,0) 46%);}
+.slide.light::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(110% 80% at 88% -6%, rgba(28,107,74,0.05), rgba(0,0,0,0) 44%);}
+
+/* ---------- Header chrome ---------- */
+.head{position:absolute;top:64px;left:132px;right:132px;display:flex;justify-content:space-between;align-items:center;z-index:3}
+.kicker{font-family:'Inter';font-weight:600;font-size:15px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink-mid)}
+.kicker .dot{color:var(--green-bright);margin:0 10px}
+.slide.light .kicker .dot{color:var(--green)}
+.wordmark{font-family:'Inter';font-weight:600;font-size:13.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-lo)}
+.wordmark b{color:var(--ink-mid);font-weight:600}
+
+/* ---------- Footer chrome ---------- */
+.foot{position:absolute;bottom:52px;left:132px;right:132px;display:flex;justify-content:space-between;align-items:center;z-index:3}
+.pagenum{font-family:'Inter';font-weight:500;font-size:13px;letter-spacing:0.16em;color:var(--ink-lo)}
+
+/* Bottom-line action strip (governing takeaway) */
+.bottomline{position:absolute;left:132px;right:132px;bottom:96px;z-index:3;
+  display:flex;align-items:center;gap:20px;}
+.bottomline .mark{width:11px;height:11px;flex:0 0 auto;background:var(--green);transform:rotate(45deg)}
+.slide.dark .bottomline .mark{background:var(--green-bright)}
+.bottomline .txt{font-family:'Inter Tight';font-weight:600;font-size:22px;letter-spacing:-0.01em;color:var(--ink);line-height:1.28}
+.bottomline .txt em{font-style:normal;color:var(--green)}
+.slide.dark .bottomline .txt em{color:var(--green-bright)}
+.bottomline.hairtop{padding-top:26px;border-top:1px solid var(--hair)}
+
+/* ---------- Type primitives ---------- */
+.h1{font-family:'Inter Tight';font-weight:600;font-size:56px;line-height:1.04;letter-spacing:-0.022em;color:var(--ink);max-width:1400px}
+.h1 .accent{color:var(--green)}
+.slide.dark .h1 .accent{color:var(--green-bright)}
+.subtitle{font-family:'Inter';font-weight:400;font-size:24px;line-height:1.4;color:var(--ink-mid);max-width:1180px;margin-top:20px}
+.eyebrow{font-family:'Inter';font-weight:600;font-size:14px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-lo)}
+
+/* Content region below header */
+.body{position:absolute;left:132px;right:132px;top:150px;bottom:150px;z-index:2}
+
+/* ---------- Utility ---------- */
+.tag{display:inline-flex;align-items:center;height:26px;padding:0 11px;border-radius:3px;
+  font-family:'Inter';font-weight:600;font-size:12.5px;letter-spacing:0.08em;text-transform:uppercase}
+.tag.green{background:var(--green-pale);color:var(--green)}
+.tag.greenline{border:1px solid var(--green-line);color:var(--green)}
+.slide.dark .tag.greenline{color:var(--green-bright);border-color:rgba(67,161,120,0.5)}
+.tag.purple{background:var(--purple-pale);color:var(--purple)}
+.tag.rust{background:var(--rust-pale);color:var(--rust)}
+.tag.amber{background:var(--amber-pale);color:#8f6f22}
+.tag.ghost{border:1px solid var(--hair);color:var(--ink-mid)}
+
+.num-serif{font-family:'Fraunces';font-weight:400;letter-spacing:-0.01em;font-feature-settings:"ss01";}
+
+/* Hairline helpers */
+.rule{height:1px;background:var(--hair);border:0}
+.rule-soft{height:1px;background:var(--hair-soft);border:0}
